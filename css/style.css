@@ -1,15 +1,19 @@
 * {
 	margin: 0px;
 	padding: 0px;
-	box-sizing: border-box;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
 }
 
 body {
 	font-family: 'Lato', sans-serif;
-	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.7;
 	color: #777;
+	box-sizing: border-box;
 }
 .wrapper {
 	background: linear-gradient(to left, #422263, #8748c5, #422263);
@@ -33,16 +37,16 @@ body {
 .logo-box {
 	position: absolute;
 	background-color: black;
-	border: solid 2px white;
+	border: solid 0.2rem white;
 	transition: 1s ease-out;
 }
 .logo-box:hover {
 	transform: rotate(350deg);
-	border: solid 4px white;
+	border: solid 0.4rem white;
 }
 
 .logo {
-	padding: 10px;
+	padding: 1rem;
 }
 
 .text-box {
@@ -56,15 +60,15 @@ body {
 	color: #000;
 	text-transform: uppercase;
 	backface-visibility: hidden;
-	margin-bottom: 20px;
+	margin-bottom: 2rem;
 }
 
 .heading-primary-main {
 	display: inline-block;
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: 400;
 	letter-spacing: 1em;
-	padding-left: 15px;
+	padding-left: 1.5rem;
 	color: white;
 	background-color: black;
 	animation: moveInLeft 1s ease-out;
@@ -73,20 +77,20 @@ body {
 .heading-primary-sub {
 	display: inline-block;
 	color: black;
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: 400;
 	letter-spacing: 1em;
-	padding-left: 15px;
+	padding-left: 1.5rem;
 	animation: moveInRight 1s ease-out;
 }
 @keyframes moveInLeft {
 	0% {
 		opacity: 0;
-		transform: translateX(-100px);
+		transform: translateX(-10rem);
 	}
 
 	80% {
-		transform: translateX(10px);
+		transform: translateX(1rem);
 	}
 	100% {
 		opacity: 1;
@@ -96,11 +100,11 @@ body {
 @keyframes moveInRight {
 	0% {
 		opacity: 0;
-		transform: translateX(100px);
+		transform: translateX(10rem);
 	}
 
 	80% {
-		transform: translateX(-10px);
+		transform: translateX(-1rem);
 	}
 	100% {
 		opacity: 1;
@@ -111,24 +115,25 @@ body {
 .btn:visited {
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 5px 35px;
+	padding: 0.5rem 3.5rem;
 	display: inline-block;
-	border: 1px solid rgb(194, 194, 194);
+	border: .1rem solid rgb(65, 65, 65);
 	transition: all .2s;
 	position: relative;
 }
 .btn:hover {
 	transform: translateY(-3px);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
 }
 .btn:active {
 	transform: translateY(-1px);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 .btn-white {
 	background-color: #fff;
-	color: #777;
+	color: rgb(65, 65, 65);
 }
+
 .btn::after {
 	content: "";
 	display: inline-block;
@@ -142,7 +147,7 @@ body {
 	transition: all .4s;
 }
 .btn-white::after {
-	background-color: #fff;
+	background-color: rgb(255, 255, 255);
 }
 .btn:hover::after {
 	transform: scaleX(1.4) scaleY(1.6);
@@ -156,7 +161,7 @@ body {
 @keyframes moveInBottom {
 	0% {
 		opacity: 0;
-		transform: translateY(30px);
+		transform: translateY(3rem);
 	}
 
 	100% {
@@ -166,7 +171,7 @@ body {
 }
 
 .social-media-icons {
-	margin-top: 25px;
+	margin-top: 2.5rem;
 	transition: all .2s;
 	display: flex;
 
@@ -180,7 +185,7 @@ body {
 }
 
 #othermidia {
-	margin: 0 15px;
+	margin: 0 1.5rem;
 	animation: moveInLogo 1s ease-out 1.75s;
 	animation-fill-mode: backwards;
 }
@@ -192,10 +197,10 @@ body {
 @keyframes moveInLogo {
 	0% {
 		opacity: 0;
-		transform: translateX(-100px);
+		transform: translateX(-10rem);
 	}
 	80% {
-		transform: translateX(10px);
+		transform: translateX(1rem);
 	}
 
 	100% {
