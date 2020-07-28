@@ -1,0 +1,34 @@
+.social-media-icons {
+	margin-top: 2.5rem;
+	transition: all .2s;
+	display: flex;
+
+	justify-content: center;
+	position: relative;
+
+	#git-hub {
+		animation: moveInLogo 1s ease-out 1.5s;
+		animation-fill-mode: backwards;
+	}
+
+	#othermidia {
+		margin: 0 1.5rem;
+		animation: moveInLogo 1s ease-out 1.75s;
+		animation-fill-mode: backwards;
+	}
+
+	#instagram {
+		animation: moveInLogo 1s ease-out 2s;
+		animation-fill-mode: backwards;
+	}
+	.social-icons-img {
+		transition: 1s ease-out;
+	}
+
+	.social-icons-img:hover {
+		transform: translateY(-3px) rotate(350deg);
+	}
+	.social-icons-img:active {
+		transform: translateY(-1px);
+	}
+}

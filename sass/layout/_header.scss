@@ -1,0 +1,64 @@
+.header {
+	height: 95vh;
+	background-image: url(../img/initials2.png),
+		linear-gradient(
+			to bottom,
+			rgba($color-light-grey, 1),
+			rgba($color-white, 1),
+			rgba($color-light-grey, 1)
+		);
+	background-repeat: no-repeat;
+	background-position: 50% 18%;
+	clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0% 85%);
+	position: relative;
+	&__logo-box {
+		position: absolute;
+		background-color: $color-black;
+		border: solid 0.2rem $color-white;
+		transition: 1s ease-out;
+		&:hover {
+			transform: rotate(350deg);
+			border: solid 0.4rem $color-white;
+		}
+	}
+
+	&__logo {
+		padding: 1rem;
+	}
+
+	&__text-box {
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		transform: translate(-50%, -20%);
+		text-align: center;
+	}
+}
+@media (max-height: 700px) {
+	.header {
+		height: 100vh;
+		background-image: linear-gradient(
+				to bottom,
+				rgba($color-white, 0.9),
+				rgba($color-white, 0.9)
+			),
+			url(../img/initials2.png),
+			linear-gradient(
+				to bottom,
+				rgba($color-light-grey, 1),
+				rgba($color-white, 1),
+				rgba($color-light-grey, 1)
+			);
+		background-repeat: no-repeat;
+		background-position: 50% 18%;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		position: relative;
+	}
+	&__text-box {
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%, -20%);
+		text-align: center;
+	}
+}

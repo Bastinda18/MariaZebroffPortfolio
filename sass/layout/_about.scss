@@ -1,0 +1,39 @@
+.section-about {
+	margin-top: -15vh;
+	padding-top: 25rem 0;
+	display: flex;
+	align-items: center;
+	background-image: linear-gradient(
+			to left,
+			rgba($color-purple, .80),
+			rgba($color-light-purple, .80),
+			rgba($color-purple, .80)
+		),
+		url(../img/code.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: cover;
+	// clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0% 100%);
+	// clip-path: polygon(0 0, 50% 15%, 100% 0, 100% 100%, 0 100%);
+	//clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0% 85%);
+	// clip-path: polygon(0 0, 50% 15%, 100% 0, 100% 100%, 50% 85%, 0 100%);
+
+	// clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+
+	&__transparent {
+		background-color: rgba($color-black, 0.4);
+		padding: 3rem;
+		width: 100%;
+		margin: 20rem 0 15rem 0;
+		// height: 65%;
+
+		h2 {
+			text-align: center;
+			font-size: 4rem;
+			color: $color-pink;
+			font-weight: 300;
+			letter-spacing: 1rem;
+			animation: moveInRight 2s ease-out;
+		}
+	}
+}
