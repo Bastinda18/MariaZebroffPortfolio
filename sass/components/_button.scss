@@ -37,6 +37,12 @@
 		&::after {
 			background-color: $color-pink;
 		}
+
+		&:link,
+		&:visited {
+			border: none;
+			padding: 0.5rem 2.8rem;
+		}
 	}
 	&::after {
 		content: "";

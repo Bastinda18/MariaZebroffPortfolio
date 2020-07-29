@@ -109,6 +109,9 @@ body {
   border: none; }
   .btn-purple::after {
     background-color: #d1a3ff; }
+  .btn-purple:link, .btn-purple:visited {
+    border: none;
+    padding: 0.5rem 2.8rem; }
 
 .btn::after {
   content: "";
@@ -316,6 +319,67 @@ body {
       letter-spacing: 1rem;
       animation: moveInRight 2s ease-out; }
 
+.about {
+  width: 85%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #cbcbcb;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.7rem; }
+  .about__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    position: relative;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem);
+    background-color: #422263;
+    overflow: hidden; }
+  .about h3 {
+    display: inline-block;
+    position: relative; }
+  .about h3:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease; }
+  .about:hover h3:after {
+    width: 100%;
+    background: #d1a3ff; }
+  .about__image {
+    height: 100%;
+    transform: translate(2rem, 2rem) scale(1.6);
+    backface-visibility: hidden;
+    opacity: 0.7;
+    transition: all .5s; }
+  .about__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .about:hover .about__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .about:hover .about__image {
+    transform: translate(2rem, 2rem) scale(1.5);
+    opacity: .7;
+    filter: brightness(80%) grayscale(30%); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -368,3 +432,15 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 4rem; }
+
+.u-margin-top-medium {
+  margin-top: 2rem; }
+
+.u-margin-top-big {
+  margin-top: 4rem; }
+
+.u-text-center {
+  margin: 0 auto; }
+
+.u-center {
+  text-align: center; }
