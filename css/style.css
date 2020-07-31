@@ -84,6 +84,7 @@ body {
   display: inline-block;
   border: 0.1rem solid #515151;
   transition: all .2s;
+  border-radius: 3px;
   position: relative; }
 
 .btn:hover {
@@ -99,19 +100,37 @@ body {
 
 .btn-white {
   background-color: #fff;
-  color: #777; }
+  color: #777;
+  border-radius: 3px; }
   .btn-white::after {
     background-color: #fff; }
 
 .btn-purple {
   background-color: #d1a3ff;
   color: #fff;
-  border: none; }
+  border: #d1a3ff;
+  border-radius: 3px; }
   .btn-purple::after {
     background-color: #d1a3ff; }
   .btn-purple:link, .btn-purple:visited {
-    border: none;
+    border-radius: 3px;
+    overflow: hidden;
+    border: #d1a3ff;
     padding: 0.5rem 2.8rem; }
+  .btn-purple-form {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5rem 3.5rem;
+    display: inline-block;
+    border-radius: 3px;
+    transition: all .2s; }
+    .btn-purple-form:hover {
+      transform: translateY(-3px);
+      border: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+      .btn-purple-form:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0; }
 
 .btn::after {
   content: "";
@@ -424,6 +443,44 @@ body {
       box-decoration-break: clone;
       padding: 0 0 0 3rem; }
 
+.section-contacts {
+  padding: 15rem 0;
+  background-image: linear-gradient(130deg, #8748c5, #422263); }
+
+.contact {
+  background-image: linear-gradient(105deg, black 0%, black 40%, white 40%), url(../img/nat-10.jpg);
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  height: 55rem;
+  width: 75%;
+  margin: 0 auto;
+  position: relative; }
+  .contact h2 {
+    letter-spacing: 1rem; }
+  .contact__form {
+    width: 50%;
+    padding: 6rem;
+    margin-left: auto; }
+  .contact__info {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%); }
+    .contact__info ul {
+      list-style-type: none; }
+  .contact h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    background-color: #000;
+    padding: 1.5rem;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -70%); }
+
 .u-margin-bottom-small {
   margin-bottom: 1rem; }
 
@@ -432,6 +489,9 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 4rem; }
+
+.u-margin-top-small {
+  margin-top: 2rem; }
 
 .u-margin-top-medium {
   margin-top: 2rem; }

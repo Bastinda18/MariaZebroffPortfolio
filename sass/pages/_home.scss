@@ -25,3 +25,55 @@
 		}
 	}
 }
+
+.section-contacts {
+	padding: 15rem 0;
+	background-image: linear-gradient(130deg, rgba($color-light-purple, 1), rgba($color-purple, 1));
+}
+
+.contact {
+	background-image: linear-gradient(
+			105deg,
+			rgba($color-black, 1) 0%,
+			rgba($color-black, 1) 40%,
+			rgba($color-white, 1) 40%
+		),
+		url(../img/nat-10.jpg);
+
+	border-radius: 3px;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+	height: 55rem;
+	width: 75%;
+	margin: 0 auto;
+	position: relative;
+	h2 {
+		letter-spacing: 1rem;
+	}
+	&__form {
+		width: 50%;
+		padding: 6rem;
+		margin-left: auto;
+	}
+	&__info {
+		position: absolute;
+		color: $color-white;
+		top: 50%;
+		left: 10%;
+		transform: translateY(-50%);
+		& ul {
+			list-style-type: none;
+		}
+	}
+	h3 {
+		font-size: 2rem;
+		font-weight: 300;
+		color: $color-white;
+		background-color: $color-black;
+		padding: 1.5rem;
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		left: 70%;
+		transform: translate(-50%, -70%);
+	}
+}
