@@ -1,0 +1,48 @@
+svg {
+	width: 200%;
+	position: absolute;
+	top: 0;
+	left: -40%;
+
+	margin: auto;
+}
+
+#Layer_1 rect {
+	stroke-dasharray: 300;
+	stroke-dashoffset: 300;
+
+	animation: 8s outline forwards;
+}
+
+#Layer_1 path {
+	transform: scale(.5);
+	transform-origin: 43% 30%;
+	opacity: 0;
+	animation: 5s logo forwards;
+}
+
+#Layer_2 path {
+	opacity: 0;
+	animation-delay: 8s;
+	animation: 5s logo forwards;
+}
+
+@keyframes outline {
+	from {
+		stroke-dashoffset: 300;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes logo {
+	from {
+		transform: scale(.5);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

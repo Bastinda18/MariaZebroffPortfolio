@@ -277,6 +277,43 @@ body {
       width: 100%;
       background: #d1a3ff; }
 
+svg {
+  width: 200%;
+  position: absolute;
+  top: 0;
+  left: -40%;
+  margin: auto; }
+
+#Layer_1 rect {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: 8s outline forwards; }
+
+#Layer_1 path {
+  transform: scale(0.5);
+  transform-origin: 43% 30%;
+  opacity: 0;
+  animation: 5s logo forwards; }
+
+#Layer_2 path {
+  opacity: 0;
+  animation-delay: 8s;
+  animation: 5s logo forwards; }
+
+@keyframes outline {
+  from {
+    stroke-dashoffset: 300; }
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes logo {
+  from {
+    transform: scale(0.5);
+    opacity: 0; }
+  to {
+    transform: scale(1);
+    opacity: 1; } }
+
 .header {
   height: 95vh;
   background-image: url(../img/initials2.png), linear-gradient(to bottom, #cbcbcb, white, #cbcbcb);
@@ -464,9 +501,14 @@ body {
   .contact__info {
     position: absolute;
     color: #fff;
+    height: 60%;
     top: 50%;
     left: 10%;
     transform: translateY(-50%); }
+    .contact__info--svg-container {
+      position: relative;
+      width: 100%;
+      height: 75%; }
     .contact__info ul {
       list-style-type: none; }
   .contact h3 {
