@@ -7,19 +7,39 @@
 	position: relative;
 
 	#git-hub {
-		animation: moveInLogo 1s ease-out 1.5s;
+		transition: opacity 1s 1s ease-out, animation;
 		animation-fill-mode: backwards;
+		&.is-visible {
+			opacity: 1;
+
+			animation: moveInLogo 1s ease-out 1.5s;
+			animation-fill-mode: backwards;
+		}
 	}
 
 	#othermidia {
 		margin: 0 1.5rem;
-		animation: moveInLogo 1s ease-out 1.75s;
+		transition: opacity 1s 1s ease-out, animation;
 		animation-fill-mode: backwards;
+		&.is-visible {
+			opacity: 1;
+
+			animation: moveInLogo 1s ease-out 1.75s;
+			animation-fill-mode: backwards;
+		}
 	}
 
 	#instagram {
-		animation: moveInLogo 1s ease-out 2s;
+		opacity: 0;
+		transition: opacity 1s 1s ease-out, animation;
 		animation-fill-mode: backwards;
+
+		&.is-visible {
+			opacity: 1;
+
+			animation: moveInLogo 1s ease-out 2s;
+			animation-fill-mode: backwards;
+		}
 	}
 	.social-icons-img {
 		transition: 1s ease-out;

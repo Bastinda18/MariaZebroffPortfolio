@@ -80,7 +80,14 @@
 	}
 
 	&-animated {
-		animation: moveInBottom .5s ease-out .75s;
 		animation-fill-mode: backwards;
+		opacity: 0;
+		transition: opacity 1s 1s ease-out, animation;
+
+		&.is-visible {
+			opacity: 1;
+			animation: moveInBottom .5s ease-out .75s;
+			animation-fill-mode: backwards;
+		}
 	}
 }

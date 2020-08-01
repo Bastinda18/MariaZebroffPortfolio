@@ -11,20 +11,37 @@ svg {
 	stroke-dasharray: 300;
 	stroke-dashoffset: 300;
 
-	animation: 8s outline forwards;
+	opacity: 0;
+	transition: opacity 1s 1s ease-out, animation;
+
+	&.is-visible {
+		opacity: 1;
+		animation: 8s outline forwards;
+	}
 }
 
 #Layer_1 path {
 	transform: scale(.5);
 	transform-origin: 43% 30%;
 	opacity: 0;
-	animation: 5s logo forwards;
+
+	transition: opacity .5s .5s ease-out, animation;
+
+	&.is-visible {
+		opacity: 1;
+		animation: 5s logo forwards;
+	}
 }
 
 #Layer_2 path {
 	opacity: 0;
 	animation-delay: 8s;
-	animation: 5s logo forwards;
+	transition: opacity .5s .5s ease-out, animation;
+
+	&.is-visible {
+		opacity: 1;
+		animation: 5s logo forwards;
+	}
 }
 
 @keyframes outline {

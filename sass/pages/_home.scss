@@ -16,12 +16,18 @@
 	&-header {
 		display: block;
 		text-align: center;
+		opacity: 0;
+		transition: all .5s .4s ease-in-out;
+		will-change: opacity;
 		span {
 			text-align: center;
 			background-color: $color-light-grey;
 			-webkit-box-decoration-break: clone;
 			box-decoration-break: clone;
 			padding: 0 0 0 3rem;
+		}
+		&.is-visible {
+			opacity: 1;
 		}
 	}
 }

@@ -20,7 +20,12 @@ body {
 		padding-left: 1.5rem;
 		color: $color-white;
 		background-color: $color-black;
-		animation: moveInLeft 1s ease-out;
+		opacity: 0;
+		transition: opacity 1s 1s ease-out, animation;
+		&.is-visible {
+			opacity: 1;
+			animation: moveInLeft 2s ease-out;
+		}
 	}
 	&-sub {
 		display: inline-block;
@@ -29,6 +34,12 @@ body {
 		font-weight: 400;
 		letter-spacing: 1em;
 		padding-left: 1.5rem;
-		animation: moveInRight 1s ease-out;
+		opacity: 0;
+		transition: opacity 1s 1s ease-out, animation;
+
+		&.is-visible {
+			opacity: 1;
+			animation: moveInRight 2s ease-out;
+		}
 	}
 }
