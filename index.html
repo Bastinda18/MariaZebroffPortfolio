@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        
+        
         <meta charset="UTF-8">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
@@ -11,11 +14,27 @@
 
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
-        <title>Maria Zebroff | Professional Portfolio</title>
+        <link rel="shortcut icon" type="image/png" href="img/favicon-1.png">
+       <title>Maria Zebroff | Professional Portfolio</title>
+
+         
     </head>
     <body> 
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
+            <div class="navigation__background">&nbsp;</div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Portfolio</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Contacts</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
        
         <header class="header">
            <div class="header__logo-box">
@@ -75,7 +94,7 @@
         <section class="section-project">
             <div class="section-project--wrapper">
             <div class="u-margin-bottom-big">
-                <h2 class="heading-primary heading-primary-sub section-project-header">
+                <h2 class="heading-primary heading-primary-sub section-project-header show-on-scroll">
                     My <span>Projects<span></h2>
             </div>
             <div class="row">
@@ -286,7 +305,7 @@
                     <textarea  id="message" name="message" class="form__input" rows="5" cols="30">
                  
                     </textarea>
-                    <button  class="btn-purple btn-purple-form  u-margin-top-small u-margin-bottom-small">
+                    <button  class="btn btn-purple btn-purple-form  u-margin-top-small u-margin-bottom-small">
                         Send
                     </button>
             </div>
@@ -306,6 +325,43 @@
 </section>
 
         </main>
+
+        <footer class="footer">
+            <div class="row">
+              <div class="footer__content">
+             
+                
+                <div class="footer__copyright">
+                    <p>
+                    Built by <a href="#" >Maria Zebroff.</a>
+                </p>  
+                    <p>
+                        Copyright &copy; <a href="#" >Maria Zebroff.</a>
+                </p>
+                <p>
+                    <span class="purple">E-mail: </span>Bastinda18@yahoo.ca | <span class="purple">phone: </span>236-426-38-73
+            </p>
+                </div>
+                
+           <ul class="footer__content-menu">
+               <li>
+                   <a href="#">Home</a>
+                </li>
+                <li>
+                   <a href="#">About</a>
+                </li>
+                <li>
+                   <a href="#">Portfolio</a>
+                </li>
+                <li>
+                   <a href="#">Contact</a>
+                </li>
+            
+           </ul>
+           <img src="img/logo.png" alt="Logo" class="footer__logo">
+            </div>
+            </div>
+        </footer>
        
       
     
@@ -315,5 +371,7 @@
         src="js/form-submission-handler.js"></script>
 
         <script src="js/show-on-scroll.js"></script>
+
+        <script src="js/menu.js"></script>
 
 </html>

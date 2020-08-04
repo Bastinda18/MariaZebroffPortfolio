@@ -1,0 +1,40 @@
+.footer {
+	background-color: $color-black;
+	color: $color-light-grey;
+	height: 15rem;
+	padding: 2rem;
+	&__content {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		&-menu {
+			list-style: none;
+
+			li {
+				text-transform: uppercase;
+			}
+		}
+	}
+	img {
+		padding: .5rem;
+		margin: 2rem;
+		border: 3px solid $color-white;
+	}
+	a:link,
+	a:visited {
+		text-decoration: none;
+
+		color: $color-light-grey;
+	}
+	a:hover,
+	a:active {
+		color: $color-pink;
+	}
+
+	p {
+		span.purple {
+			color: $color-pink;
+		}
+	}
+}
