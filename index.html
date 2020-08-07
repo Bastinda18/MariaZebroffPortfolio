@@ -27,16 +27,16 @@
             <div class="navigation__background">&nbsp;</div>
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Portfolio</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Contacts</a></li>
+                    <li class="navigation__item"><a href="#header" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#section-about" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#section-project" class="navigation__link">Portfolio</a></li>
+                    <li class="navigation__item"><a href="#section-contacts" class="navigation__link">Contacts</a></li>
                     
                 </ul>
             </nav>
         </div>
        
-        <header class="header">
+        <header class="header" id="header">
            <div class="header__logo-box">
                <img src="img/logo.png" alt="Logo" class="header__logo">
             </div>
@@ -57,7 +57,7 @@
             </div>
         </header>
         <main>
-            <section class="section-about">
+            <section class="section-about" id="section-about">
            <div class="section-about__transparent">
                <h2 class="u-margin-bottom-small show-on-scroll">Maria Zebroff</h2>
           
@@ -91,7 +91,7 @@
 
             
         </section>
-        <section class="section-project">
+        <section class="section-project" id="section-project">
             <div class="section-project--wrapper">
             <div class="u-margin-bottom-big">
                 <h2 class="heading-primary heading-primary-sub section-project-header show-on-scroll">
@@ -123,8 +123,9 @@
                         </div>
                         <div class="card__side card__side--back ">
                             <div class="card__cta">
-                                <a href="#" class="btn btn-purple  u-margin-bottom-big">See Project Code</a>
-                                <a href="#" class="btn btn-white ">Project Online</a>
+                                <a href="#popup" class="btn btn-white  u-margin-bottom-big btn-description" id="description">Description</a>
+                                <a href="#" class="btn btn-purple  u-margin-bottom-big">See Source Code</a>
+                                <a href="#" class="btn btn-white ">See Project Live</a>
                       </div>
                        
                     </div>
@@ -205,7 +206,7 @@
         </div>
         </section>
 
-<section class="section-contacts">
+<section class="section-contacts" id="section-contacts">
  
     <div class="contact">
         
@@ -333,10 +334,10 @@
                 
                 <div class="footer__copyright">
                     <p>
-                    Built by <a href="#" >Maria Zebroff.</a>
+                    Built by <a href="#section-about" >Maria Zebroff.</a>
                 </p>  
                     <p>
-                        Copyright &copy; <a href="#" >Maria Zebroff.</a>
+                        Copyright &copy; <a href="#section-about" >Maria Zebroff.</a>
                 </p>
                 <p>
                     <span class="purple">E-mail: </span>Bastinda18@yahoo.ca | <span class="purple">phone: </span>236-426-38-73
@@ -348,13 +349,13 @@
                    <a href="#">Home</a>
                 </li>
                 <li>
-                   <a href="#">About</a>
+                   <a href="#section-about">About</a>
                 </li>
                 <li>
-                   <a href="#">Portfolio</a>
+                   <a href="#section-project">Portfolio</a>
                 </li>
                 <li>
-                   <a href="#">Contact</a>
+                   <a href="#section-contacts">Contact</a>
                 </li>
             
            </ul>
@@ -364,6 +365,35 @@
         </footer>
        
       
+<div class="popup" id="popup">
+    <div class="popup__content">
+       
+        <div class="popup__right">
+            <a href="#section-project" class="popup__close">&times;</a>
+            <h2 class="heading-primary heading-primary-sub u-margin-bottom-medium ">About "Clean Air" Project</h2>
+            
+            <p class="popup__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                 Tenetur nemo magni tempora soluta atque fuga perferendis
+                 tempore repudiandae facilis similique necessitatibus quis
+                  porro, at et facere est nobis dolor deleniti consequuntur dicta a nam. 
+                  Ipsum laborum eligendi distinctio dignissimos facilis.
+                  Ipsum laborum eligendi distinctio dignissimos facilis.
+                  Ipsum laborum eligendi distinctio dignissimos facilis.
+                  Ipsum laborum eligendi distinctio dignissimos facilis.
+                  porro, at et facere est nobis dolor deleniti consequuntur dicta a nam. 
+                  Ipsum laborum eligendi distinctio dignissimos facilis.
+                  Ipsum laborum eligendi distinctio dignissimos facilis.
+                  Ipsum laborum eligendi distinctio dignissimos facilis.
+                  Ipsum laborum eligendi distinctio dignissimos facilis.
+                </p>
+                <div class="popup__btn-wrapper">
+                    <a href="#" class="btn btn-purple">See Project Code</a>
+                    <a href="#" class="btn btn-white ">Project Online</a>
+                </div>
+                
+        </div>
+    </div>
+</div>
     
       
         
@@ -373,5 +403,6 @@
         <script src="js/show-on-scroll.js"></script>
 
         <script src="js/menu.js"></script>
+        </body>
 
 </html>

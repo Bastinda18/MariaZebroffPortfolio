@@ -4,7 +4,7 @@
 	&:visited {
 		text-transform: uppercase;
 		text-decoration: none;
-		padding: 0.5rem 3.5rem;
+		padding: 0.5rem 3.6rem;
 		display: inline-block;
 		border: .1rem solid darken($color-grey, 15%);
 		transition: all .2s;
@@ -43,6 +43,7 @@
 		background-color: $color-pink;
 		color: $color-white;
 		border: none;
+		padding: 0.5rem 3.2rem;
 		border-radius: 3px;
 		transition: all .2s;
 		&:hover {
@@ -104,6 +105,14 @@
 			opacity: 1;
 			animation: moveInBottom .5s ease-out .75s;
 			animation-fill-mode: backwards;
+		}
+	}
+	&-description {
+		&,
+		&:link,
+		&:visited {
+			padding-left: 5.6rem;
+			padding-right: 5.6rem;
 		}
 	}
 }
