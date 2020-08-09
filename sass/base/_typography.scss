@@ -9,7 +9,9 @@ body {
 .heading-primary {
 	color: $color-black;
 	text-transform: uppercase;
+	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+
 	margin-bottom: 2rem;
 
 	&-main {

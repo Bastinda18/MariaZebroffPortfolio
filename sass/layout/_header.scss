@@ -19,6 +19,10 @@
 		&:hover {
 			transform: rotate(350deg);
 			border: solid 0.4rem $color-white;
+
+			@include respond(tab-port) {
+				transform: rotate(0deg);
+			}
 		}
 	}
 

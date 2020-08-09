@@ -8,12 +8,13 @@
 .u-margin-bottom-big {
 	margin-bottom: 4rem;
 }
-.u-margin-top-xsmall {
-	margin-top: 1rem;
-}
 
 .u-margin-top-small {
 	margin-top: 2rem;
+
+	@include respond(tab-port) {
+		margin-top: 1rem;
+	}
 }
 
 .u-margin-top-medium {
