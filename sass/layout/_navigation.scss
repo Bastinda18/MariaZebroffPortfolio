@@ -16,6 +16,9 @@
 		box-shadow: 0 1rem 3rem rgba($color-black, .1);
 		text-align: center;
 		cursor: pointer;
+		@include respond(phone) {
+			right: 2rem;
+		}
 	}
 	&__background {
 		height: 6rem;
@@ -27,6 +30,9 @@
 		background-image: radial-gradient($color-light-purple, $color-purple);
 		z-index: 1000;
 		transition: transform .8s cubic-bezier(.88, 0.01, .08, 1.01);
+		@include respond(phone) {
+			right: 2.5rem;
+		}
 	}
 	&__nav {
 		height: 100vh;

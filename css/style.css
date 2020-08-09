@@ -331,6 +331,11 @@ svg {
   top: 0;
   left: -40%;
   margin: auto; }
+  @media (max-width: 56.25em) {
+    svg {
+      width: 100%;
+      top: -40%;
+      left: 0; } }
 
 #Layer_1 rect {
   stroke-dasharray: 300;
@@ -464,14 +469,11 @@ svg {
     transform: translate(-50%, -20%);
     text-align: center; }
 
-@media (max-height: 700px) {
+@media (max-height: 650px) {
   .header {
     height: 100vh;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/initials2.png), linear-gradient(to bottom, #cbcbcb, white, #cbcbcb);
-    background-repeat: no-repeat;
-    background-position: 50% 18%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    position: relative; }
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
   __text-box {
     position: absolute;
     top: 30%;
@@ -494,6 +496,9 @@ svg {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      right: 2rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -505,6 +510,9 @@ svg {
   background-image: radial-gradient(#8748c5, #422263);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.88, 0.01, 0.08, 1.01); }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      right: 2.5rem; } }
 
 .navigation__nav {
   height: 100vh;
@@ -611,7 +619,13 @@ svg {
     background-color: rgba(0, 0, 0, 0.4);
     padding: 3rem;
     width: 100%;
-    margin: 20rem 0 15rem 0; }
+    margin: 20rem 0 10rem 0; }
+    @media (max-width: 75em) {
+      .section-about__transparent {
+        margin: 30rem 0 20rem 0; } }
+    @media (max-width: 56.25em) {
+      .section-about__transparent {
+        margin: 25rem 0 20rem 0; } }
     .section-about__transparent h2 {
       text-align: center;
       font-size: 4rem;
@@ -625,7 +639,7 @@ svg {
         animation: moveInRight 2s ease-out; }
 
 .about {
-  width: 85%;
+  width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: #cbcbcb;
@@ -635,6 +649,13 @@ svg {
   font-size: 1.7rem;
   opacity: 0;
   transition: opacity .5s .5s ease-out, animation; }
+  @media (max-width: 56.25em) {
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 3rem; } }
   .about.is-visible {
     opacity: 1;
     animation: moveInLeft 2s ease-out; }
@@ -653,6 +674,9 @@ svg {
   .about h3 {
     display: inline-block;
     position: relative; }
+    @media (max-width: 56.25em) {
+      .about h3 {
+        align-self: center; } }
   .about h3:after {
     content: '';
     display: block;
@@ -695,6 +719,13 @@ svg {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -703,6 +734,13 @@ svg {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 4rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc( (100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -721,12 +759,22 @@ svg {
   color: #cbcbcb;
   height: 15rem;
   padding: 2rem; }
+  @media (max-width: 56.25em) {
+    .footer {
+      height: 100%; } }
   .footer__content {
     display: flex;
     justify-content: space-around;
     align-items: center; }
+    @media (max-width: 56.25em) {
+      .footer__content {
+        flex-direction: column-reverse;
+        align-content: space-between; } }
     .footer__content-menu {
       list-style: none; }
+      @media (max-width: 56.25em) {
+        .footer__content-menu {
+          display: none; } }
       .footer__content-menu li {
         text-transform: uppercase; }
   .footer img {
@@ -742,10 +790,11 @@ svg {
     color: #d1a3ff; }
   .footer p span.purple {
     color: #d1a3ff; }
+  @media (max-width: 56.25em) {
+    .footer p {
+      text-align: center; } }
 
 .section-project {
-  margin-top: -12vh;
-  clip-path: polygon(0 7%, 50% 0%, 100% 7%, 100% 100%, 0 100%);
   background-image: linear-gradient(to bottom, #cbcbcb, white, #cbcbcb);
   padding: 25rem 0 10rem 0; }
   .section-project--wrapper {
@@ -771,19 +820,35 @@ svg {
   background-image: linear-gradient(130deg, #8748c5, #422263); }
 
 .contact {
-  background-image: linear-gradient(105deg, black 0%, black 40%, white 40%), url(../img/nat-10.jpg);
+  background-image: linear-gradient(105deg, black 0%, black 40%, white 40%);
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
   height: 55rem;
   width: 75%;
   margin: 0 auto;
   position: relative; }
+  @media (max-width: 56.25em) {
+    .contact {
+      background-image: linear-gradient(180deg, black 0%, black 18%, white 18%); } }
+  @media (max-width: 37.5em) {
+    .contact {
+      background-image: linear-gradient(185deg, black 0%, black 18%, white 18%); } }
   .contact h2 {
     letter-spacing: 1rem; }
+    @media (max-width: 56.25em) {
+      .contact h2 {
+        margin-bottom: 1rem;
+        margin-top: 1rem; } }
   .contact__form {
     width: 50%;
     padding: 6rem;
     margin-left: auto; }
+    @media (max-width: 56.25em) {
+      .contact__form {
+        width: 100%;
+        padding: 2rem;
+        margin: auto;
+        padding-top: 10rem; } }
   .contact__info {
     position: absolute;
     color: #fff;
@@ -791,10 +856,32 @@ svg {
     top: 50%;
     left: 10%;
     transform: translateY(-50%); }
+    @media (max-width: 75em) {
+      .contact__info {
+        left: 5%; } }
+    @media (max-width: 56.25em) {
+      .contact__info {
+        color: #777;
+        height: 0%;
+        width: 100%;
+        top: 2%;
+        left: 4%;
+        transform: translateY(0);
+        font-size: .8rem; } }
     .contact__info--svg-container {
       position: relative;
       width: 100%;
       height: 75%; }
+      @media (max-width: 56.25em) {
+        .contact__info--svg-container {
+          height: 40%;
+          width: 30%;
+          margin-left: auto; } }
+      @media (max-width: 37.5em) {
+        .contact__info--svg-container {
+          height: 0%;
+          width: 40%;
+          margin-left: auto; } }
     .contact__info ul {
       list-style-type: none; }
   .contact h3 {

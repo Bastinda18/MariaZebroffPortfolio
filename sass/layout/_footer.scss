@@ -3,13 +3,24 @@
 	color: $color-light-grey;
 	height: 15rem;
 	padding: 2rem;
+	@include respond(tab-port) {
+		height: 100%;
+	}
 	&__content {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		@include respond(tab-port) {
+			flex-direction: column-reverse;
+
+			align-content: space-between;
+		}
 
 		&-menu {
 			list-style: none;
+			@include respond(tab-port) {
+				display: none;
+			}
 
 			li {
 				text-transform: uppercase;
@@ -35,6 +46,9 @@
 	p {
 		span.purple {
 			color: $color-pink;
+		}
+		@include respond(tab-port) {
+			text-align: center;
 		}
 	}
 }

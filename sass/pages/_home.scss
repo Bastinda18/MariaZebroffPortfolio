@@ -1,6 +1,5 @@
 .section-project {
-	margin-top: -12vh;
-	clip-path: polygon(0 7%, 50% 0%, 100% 7%, 100% 100%, 0 100%);
+	// clip-path: polygon(0 15%, 50% 15%, 100% 15%, 100% 100%, 0 100%);
 	background-image: linear-gradient(
 		to bottom,
 		rgba($color-light-grey, 1),
@@ -39,12 +38,11 @@
 
 .contact {
 	background-image: linear-gradient(
-			105deg,
-			rgba($color-black, 1) 0%,
-			rgba($color-black, 1) 40%,
-			rgba($color-white, 1) 40%
-		),
-		url(../img/nat-10.jpg);
+		105deg,
+		rgba($color-black, 1) 0%,
+		rgba($color-black, 1) 40%,
+		rgba($color-white, 1) 40%
+	);
 
 	border-radius: 3px;
 	box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
@@ -52,13 +50,41 @@
 	width: 75%;
 	margin: 0 auto;
 	position: relative;
+
+	@include respond(tab-port) {
+		background-image: linear-gradient(
+			180deg,
+			rgba($color-black, 1) 0%,
+			rgba($color-black, 1) 18%,
+			rgba($color-white, 1) 18%
+		);
+	}
+	@include respond(phone) {
+		background-image: linear-gradient(
+			185deg,
+			rgba($color-black, 1) 0%,
+			rgba($color-black, 1) 18%,
+			rgba($color-white, 1) 18%
+		);
+	}
+
 	h2 {
 		letter-spacing: 1rem;
+		@include respond(tab-port) {
+			margin-bottom: 1rem;
+			margin-top: 1rem;
+		}
 	}
 	&__form {
 		width: 50%;
 		padding: 6rem;
 		margin-left: auto;
+		@include respond(tab-port) {
+			width: 100%;
+			padding: 2rem;
+			margin: auto;
+			padding-top: 10rem;
+		}
 	}
 	&__info {
 		position: absolute;
@@ -67,10 +93,34 @@
 		top: 50%;
 		left: 10%;
 		transform: translateY(-50%);
+		@include respond(tab-land) {
+			left: 5%;
+		}
+		@include respond(tab-port) {
+			color: $color-grey;
+			height: 0%;
+			width: 100%;
+			top: 2%;
+			left: 4%;
+			transform: translateY(0);
+			font-size: .8rem;
+		}
 		&--svg-container {
 			position: relative;
 			width: 100%;
 			height: 75%;
+
+			@include respond(tab-port) {
+				height: 40%;
+				width: 30%;
+				margin-left: auto;
+			}
+
+			@include respond(phone) {
+				height: 0%;
+				width: 40%;
+				margin-left: auto;
+			}
 		}
 		& ul {
 			list-style-type: none;

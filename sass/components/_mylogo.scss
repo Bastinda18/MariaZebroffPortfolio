@@ -5,6 +5,11 @@ svg {
 	left: -40%;
 
 	margin: auto;
+	@include respond(tab-port) {
+		width: 100%;
+		top: -40%;
+		left: 0;
+	}
 }
 
 #Layer_1 rect {
