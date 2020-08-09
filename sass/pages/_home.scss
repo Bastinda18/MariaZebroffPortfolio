@@ -113,11 +113,8 @@
 			font-size: 1rem;
 		}
 
-		a:link,
-		a:active,
-		a:visited,
-		a:hover {
-			color: $color-white;
+		#phone {
+			color: $color-grey;
 		}
 
 		&--svg-container {
