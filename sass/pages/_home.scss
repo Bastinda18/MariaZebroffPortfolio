@@ -112,6 +112,14 @@
 		@include respond(tab-phone) {
 			font-size: 1rem;
 		}
+
+		a:link,
+		a:active,
+		a:visited,
+		a:hover {
+			color: $color-white;
+		}
+
 		&--svg-container {
 			position: relative;
 			width: 100%;
