@@ -14,6 +14,13 @@
 		opacity: 1;
 		letter-spacing: 1.2rem;
 		padding-left: 0;
+
+		@include respond(tab-port) {
+			letter-spacing: 1rem;
+		}
+		@include respond(phone) {
+			letter-spacing: .5rem;
+		}
 	}
 
 	&__content {
@@ -38,6 +45,9 @@
 
 		vertical-align: middle;
 		padding: 3rem 5rem;
+		@include respond(tab-port) {
+			width: 100%;
+		}
 	}
 
 	&__text {
@@ -54,10 +64,26 @@
 		-ms-hyphens: auto;
 		-webkit-hyphens: auto;
 		hyphens: auto;
+		@include respond(tab-port) {
+			column-count: 1;
+			column-gap: 0;
+		}
 	}
 	&__btn-wrapper {
 		display: flex;
 		justify-content: flex-end;
+
+		@include respond(tab-port) {
+			justify-content: center;
+			flex-wrap: wrap;
+			align-content: space-between;
+		}
+
+		&--btn {
+			@include respond(tab-port) {
+				margin-bottom: 1rem;
+			}
+		}
 
 		a {
 			margin-left: 2rem;

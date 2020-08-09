@@ -66,6 +66,7 @@ body {
 .heading-primary {
   color: #000;
   text-transform: uppercase;
+  -webkit-perspective: 1000;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   margin-bottom: 2rem; }
@@ -78,14 +79,10 @@ body {
     color: #fff;
     background-color: #000;
     opacity: 0;
-    transition: opacity 1s 1s ease-out, animation;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
+    transition: opacity 1s 1s ease-out, animation; }
     .heading-primary-main.is-visible {
       opacity: 1;
-      animation: moveInLeft 2s ease-out;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden; }
+      animation: moveInLeft 2s ease-out; }
   .heading-primary-sub {
     display: inline-block;
     color: #000;
@@ -94,14 +91,10 @@ body {
     letter-spacing: 1em;
     padding-left: 1.5rem;
     opacity: 0;
-    transition: opacity 1s 1s ease-out, animation;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
+    transition: opacity 1s 1s ease-out, animation; }
     .heading-primary-sub.is-visible {
       opacity: 1;
-      animation: moveInRight 2s ease-out;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden; }
+      animation: moveInRight 2s ease-out; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -430,6 +423,12 @@ svg {
     opacity: 1;
     letter-spacing: 1.2rem;
     padding-left: 0; }
+    @media (max-width: 56.25em) {
+      .popup h2 {
+        letter-spacing: 1rem; } }
+    @media (max-width: 37.5em) {
+      .popup h2 {
+        letter-spacing: .5rem; } }
   .popup__content {
     width: 75%;
     background-color: #fff;
@@ -448,6 +447,9 @@ svg {
     width: 80%;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (max-width: 56.25em) {
+      .popup__right {
+        width: 100%; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
@@ -459,9 +461,21 @@ svg {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+    @media (max-width: 56.25em) {
+      .popup__text {
+        column-count: 1;
+        column-gap: 0; } }
   .popup__btn-wrapper {
     display: flex;
     justify-content: flex-end; }
+    @media (max-width: 56.25em) {
+      .popup__btn-wrapper {
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: space-between; } }
+    @media (max-width: 56.25em) {
+      .popup__btn-wrapper--btn {
+        margin-bottom: 1rem; } }
     .popup__btn-wrapper a {
       margin-left: 2rem; }
   .popup:target {
@@ -913,6 +927,9 @@ svg {
         left: 4%;
         transform: translateY(0);
         font-size: 1.5rem; } }
+    @media (max-width: 37.5em) {
+      .contact__info {
+        font-size: 1rem; } }
     .contact__info #phone {
       color: #777; }
       .contact__info #phone a {

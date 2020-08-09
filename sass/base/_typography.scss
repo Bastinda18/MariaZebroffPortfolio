@@ -9,6 +9,7 @@ body {
 .heading-primary {
 	color: $color-black;
 	text-transform: uppercase;
+	-webkit-perspective: 1000;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 
@@ -24,13 +25,10 @@ body {
 		background-color: $color-black;
 		opacity: 0;
 		transition: opacity 1s 1s ease-out, animation;
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
+
 		&.is-visible {
 			opacity: 1;
 			animation: moveInLeft 2s ease-out;
-			-webkit-backface-visibility: hidden;
-			backface-visibility: hidden;
 		}
 	}
 	&-sub {
@@ -42,14 +40,10 @@ body {
 		padding-left: 1.5rem;
 		opacity: 0;
 		transition: opacity 1s 1s ease-out, animation;
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
 
 		&.is-visible {
 			opacity: 1;
 			animation: moveInRight 2s ease-out;
-			-webkit-backface-visibility: hidden;
-			backface-visibility: hidden;
 		}
 	}
 }
