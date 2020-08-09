@@ -114,6 +114,17 @@
 		}
 
 		#phone {
+			a {
+				color: $color-grey;
+
+				&:link,
+				&:visited,
+				&:active,
+				&:any-link,
+				&:-webkit-any-link {
+					color: $color-grey;
+				}
+			}
 			color: $color-grey;
 		}
 

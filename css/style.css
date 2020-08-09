@@ -78,10 +78,14 @@ body {
     color: #fff;
     background-color: #000;
     opacity: 0;
-    transition: opacity 1s 1s ease-out, animation; }
+    transition: opacity 1s 1s ease-out, animation;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
     .heading-primary-main.is-visible {
       opacity: 1;
-      animation: moveInLeft 2s ease-out; }
+      animation: moveInLeft 2s ease-out;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; }
   .heading-primary-sub {
     display: inline-block;
     color: #000;
@@ -90,10 +94,14 @@ body {
     letter-spacing: 1em;
     padding-left: 1.5rem;
     opacity: 0;
-    transition: opacity 1s 1s ease-out, animation; }
+    transition: opacity 1s 1s ease-out, animation;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
     .heading-primary-sub.is-visible {
       opacity: 1;
-      animation: moveInRight 2s ease-out; }
+      animation: moveInRight 2s ease-out;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -905,6 +913,12 @@ svg {
         left: 4%;
         transform: translateY(0);
         font-size: 1.5rem; } }
+    .contact__info #phone {
+      color: #777; }
+      .contact__info #phone a {
+        color: #777; }
+        .contact__info #phone a:link, .contact__info #phone a:visited, .contact__info #phone a:active, .contact__info #phone a:any-link, .contact__info #phone a:-webkit-any-link {
+          color: #777; }
     .contact__info--svg-container {
       position: relative;
       width: 100%;
