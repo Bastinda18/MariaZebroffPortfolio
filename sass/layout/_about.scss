@@ -36,13 +36,15 @@
 			color: $color-pink;
 			font-weight: 300;
 			letter-spacing: 1rem;
-
 			opacity: 0;
-			transition: opacity 1s 1s ease-out, animation;
+			visibility: hidden;
+			transition: visibility 1s 300ms ease-out, animation;
 
 			&.is-visible {
 				opacity: 1;
+
 				animation: moveInRight 2s ease-out;
+				visibility: visible;
 			}
 		}
 	}
@@ -58,7 +60,8 @@
 	padding-left: 9rem;
 	font-size: 1.7rem;
 	opacity: 0;
-	transition: opacity .5s .5s ease-out, animation;
+	visibility: hidden;
+	transition: visibility .5s 300ms ease-out, animation;
 	@include respond(tab-port) {
 		display: flex;
 		flex-direction: column;
@@ -70,6 +73,7 @@
 	&.is-visible {
 		opacity: 1;
 		animation: moveInLeft 2s ease-out;
+		visibility: visible;
 	}
 
 	&__shape {

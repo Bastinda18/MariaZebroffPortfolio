@@ -9,7 +9,7 @@ body {
 .heading-primary {
 	color: $color-black;
 	text-transform: uppercase;
-	-webkit-perspective: 1000;
+
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 
@@ -23,12 +23,17 @@ body {
 		padding-left: 1.5rem;
 		color: $color-white;
 		background-color: $color-black;
+		-webkit-transform: translate3d(0, 0, 0);
 		opacity: 0;
-		transition: opacity 1s 1s ease-out, animation;
+		visibility: hidden;
+
+		transition: visibility 1s 1s ease-out, animation;
 
 		&.is-visible {
-			opacity: 1;
+			opacity: 1; //changed
+
 			animation: moveInLeft 2s ease-out;
+			visibility: visible;
 		}
 	}
 	&-sub {
@@ -39,11 +44,14 @@ body {
 		letter-spacing: 1em;
 		padding-left: 1.5rem;
 		opacity: 0;
-		transition: opacity 1s 1s ease-out, animation;
+		visibility: hidden;
+		transition: visibility 1s 1s ease-out, animation;
 
 		&.is-visible {
-			opacity: 1;
+			opacity: 1; //changed
+
 			animation: moveInRight 2s ease-out;
+			visibility: visible;
 		}
 	}
 }

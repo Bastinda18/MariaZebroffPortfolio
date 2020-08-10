@@ -66,7 +66,6 @@ body {
 .heading-primary {
   color: #000;
   text-transform: uppercase;
-  -webkit-perspective: 1000;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   margin-bottom: 2rem; }
@@ -78,11 +77,14 @@ body {
     padding-left: 1.5rem;
     color: #fff;
     background-color: #000;
+    -webkit-transform: translate3d(0, 0, 0);
     opacity: 0;
-    transition: opacity 1s 1s ease-out, animation; }
+    visibility: hidden;
+    transition: visibility 1s 1s ease-out, animation; }
     .heading-primary-main.is-visible {
       opacity: 1;
-      animation: moveInLeft 2s ease-out; }
+      animation: moveInLeft 2s ease-out;
+      visibility: visible; }
   .heading-primary-sub {
     display: inline-block;
     color: #000;
@@ -91,10 +93,12 @@ body {
     letter-spacing: 1em;
     padding-left: 1.5rem;
     opacity: 0;
-    transition: opacity 1s 1s ease-out, animation; }
+    visibility: hidden;
+    transition: visibility 1s 1s ease-out, animation; }
     .heading-primary-sub.is-visible {
       opacity: 1;
-      animation: moveInRight 2s ease-out; }
+      animation: moveInRight 2s ease-out;
+      visibility: visible; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -688,10 +692,12 @@ svg {
       font-weight: 300;
       letter-spacing: 1rem;
       opacity: 0;
-      transition: opacity 1s 1s ease-out, animation; }
+      visibility: hidden;
+      transition: visibility 1s 300ms ease-out, animation; }
       .section-about__transparent h2.is-visible {
         opacity: 1;
-        animation: moveInRight 2s ease-out; }
+        animation: moveInRight 2s ease-out;
+        visibility: visible; }
 
 .about {
   width: 75%;
@@ -703,7 +709,8 @@ svg {
   padding-left: 9rem;
   font-size: 1.7rem;
   opacity: 0;
-  transition: opacity .5s .5s ease-out, animation; }
+  visibility: hidden;
+  transition: visibility .5s 300ms ease-out, animation; }
   @media (max-width: 56.25em) {
     .about {
       display: flex;
@@ -713,7 +720,8 @@ svg {
       padding: 3rem; } }
   .about.is-visible {
     opacity: 1;
-    animation: moveInLeft 2s ease-out; }
+    animation: moveInLeft 2s ease-out;
+    visibility: visible; }
   .about__shape {
     width: 15rem;
     height: 15rem;
