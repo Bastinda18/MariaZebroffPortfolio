@@ -23,11 +23,11 @@ body {
 		padding-left: 1.5rem;
 		color: $color-white;
 		background-color: $color-black;
-		-webkit-transform: translate3d(0, 0, 0);
+
 		opacity: 0;
 		visibility: hidden;
 
-		transition: visibility 1s 1s ease-out, animation;
+		transition: visibility 1s .5s ease-out, animation;
 
 		&.is-visible {
 			opacity: 1; //changed
@@ -45,7 +45,7 @@ body {
 		padding-left: 1.5rem;
 		opacity: 0;
 		visibility: hidden;
-		transition: visibility 1s 1s ease-out, animation;
+		transition: visibility 1s .5s ease-out, animation;
 
 		&.is-visible {
 			opacity: 1; //changed

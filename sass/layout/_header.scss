@@ -9,8 +9,18 @@
 		);
 	background-repeat: no-repeat;
 	background-position: 50% 18%;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0% 85%);
 	clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0% 85%);
 	position: relative;
+	@include respond(phone) {
+		background-image: url(../img/initials3.png),
+			linear-gradient(
+				to bottom,
+				rgba($color-light-grey, 1),
+				rgba($color-white, 1),
+				rgba($color-light-grey, 1)
+			);
+	}
 	&__logo-box {
 		position: absolute;
 		background-color: $color-black;
@@ -38,7 +48,7 @@
 		text-align: center;
 	}
 }
-@media (max-height: 650px) {
+@media (max-height: 560px) {
 	.header {
 		height: 100vh;
 		background-image: linear-gradient(
@@ -46,7 +56,7 @@
 				rgba($color-white, 0.9),
 				rgba($color-white, 0.9)
 			),
-			url(../img/initials2.png),
+			url(../img/initials3.png),
 			linear-gradient(
 				to bottom,
 				rgba($color-light-grey, 1),

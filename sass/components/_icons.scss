@@ -1,6 +1,7 @@
 .social-media-icons {
 	margin-top: 2.5rem;
 	transition: all .2s;
+
 	display: flex;
 
 	justify-content: center;
@@ -43,6 +44,10 @@
 	}
 	.social-icons-img {
 		transition: 1s ease-out;
+
+		@include respond(phone) {
+			transform: scale(.75);
+		}
 	}
 
 	.social-icons-img:hover {

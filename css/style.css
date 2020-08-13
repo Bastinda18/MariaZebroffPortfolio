@@ -77,10 +77,9 @@ body {
     padding-left: 1.5rem;
     color: #fff;
     background-color: #000;
-    -webkit-transform: translate3d(0, 0, 0);
     opacity: 0;
     visibility: hidden;
-    transition: visibility 1s 1s ease-out, animation; }
+    transition: visibility 1s .5s ease-out, animation; }
     .heading-primary-main.is-visible {
       opacity: 1;
       animation: moveInLeft 2s ease-out;
@@ -94,7 +93,7 @@ body {
     padding-left: 1.5rem;
     opacity: 0;
     visibility: hidden;
-    transition: visibility 1s 1s ease-out, animation; }
+    transition: visibility 1s .5s ease-out, animation; }
     .heading-primary-sub.is-visible {
       opacity: 1;
       animation: moveInRight 2s ease-out;
@@ -202,6 +201,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
@@ -320,6 +320,9 @@ body {
       animation-fill-mode: backwards; }
   .social-media-icons .social-icons-img {
     transition: 1s ease-out; }
+    @media (max-width: 37.5em) {
+      .social-media-icons .social-icons-img {
+        transform: scale(0.75); } }
   .social-media-icons .social-icons-img:hover {
     transform: translateY(-3px) rotate(350deg); }
   .social-media-icons .social-icons-img:active {
@@ -423,8 +426,14 @@ svg {
   opacity: 0;
   visibility: hidden;
   transition: all .3s; }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.3); } }
   .popup h2 {
     opacity: 1;
+    visibility: visible;
     letter-spacing: 1.2rem;
     padding-left: 0; }
     @media (max-width: 56.25em) {
@@ -477,9 +486,11 @@ svg {
         justify-content: center;
         flex-wrap: wrap;
         align-content: space-between; } }
-    @media (max-width: 56.25em) {
-      .popup__btn-wrapper--btn {
-        margin-bottom: 1rem; } }
+    .popup__btn-wrapper--btn {
+      margin-bottom: 1rem; }
+      @media (max-width: 56.25em) {
+        .popup__btn-wrapper--btn {
+          margin-bottom: 1rem; } }
     .popup__btn-wrapper a {
       margin-left: 2rem; }
   .popup:target {
@@ -506,8 +517,12 @@ svg {
   background-image: url(../img/initials2.png), linear-gradient(to bottom, #cbcbcb, white, #cbcbcb);
   background-repeat: no-repeat;
   background-position: 50% 18%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0% 85%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0% 85%);
   position: relative; }
+  @media (max-width: 37.5em) {
+    .header {
+      background-image: url(../img/initials3.png), linear-gradient(to bottom, #cbcbcb, white, #cbcbcb); } }
   .header__logo-box {
     position: absolute;
     background-color: #000;
@@ -528,10 +543,10 @@ svg {
     transform: translate(-50%, -20%);
     text-align: center; }
 
-@media (max-height: 650px) {
+@media (max-height: 560px) {
   .header {
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/initials2.png), linear-gradient(to bottom, #cbcbcb, white, #cbcbcb);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/initials3.png), linear-gradient(to bottom, #cbcbcb, white, #cbcbcb);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
   __text-box {
     position: absolute;
@@ -753,7 +768,7 @@ svg {
     background: #d1a3ff; }
   .about__image {
     height: 100%;
-    transform: translate(2rem, 2rem) scale(1.6);
+    transform: translate(1rem, 1rem) scale(1.3);
     backface-visibility: hidden;
     opacity: 0.7;
     transition: all .5s; }
@@ -773,7 +788,7 @@ svg {
     opacity: 1;
     transform: translate(-50%, -50%); }
   .about:hover .about__image {
-    transform: translate(2rem, 2rem) scale(1.5);
+    transform: translate(1rem, 1rem) scale(1.2);
     opacity: .7;
     filter: brightness(80%) grayscale(30%); }
 
@@ -859,7 +874,7 @@ svg {
 
 .section-project {
   background-image: linear-gradient(to bottom, #cbcbcb, white, #cbcbcb);
-  padding: 25rem 0 10rem 0; }
+  padding: 15rem 0 10rem 0; }
   @media (max-width: 56.25em) {
     .section-project {
       padding: 10rem 0 10rem 0; } }
@@ -870,8 +885,8 @@ svg {
     display: block;
     text-align: center;
     opacity: 0;
-    transition: all .5s .4s ease-in-out;
-    will-change: opacity; }
+    transition: visibility .5s .4s ease-in-out;
+    visibility: hidden; }
     .section-project-header span {
       text-align: center;
       background-color: #cbcbcb;
@@ -879,7 +894,8 @@ svg {
       box-decoration-break: clone;
       padding: 0 0 0 3rem; }
     .section-project-header.is-visible {
-      opacity: 1; }
+      opacity: 1;
+      visibility: visible; }
 
 .section-contacts {
   padding: 15rem 0;
@@ -906,10 +922,12 @@ svg {
     width: 50%;
     padding: 6rem;
     margin-left: auto; }
+    @media (max-width: 75em) {
+      .contact__form {
+        padding: 2rem; } }
     @media (max-width: 56.25em) {
       .contact__form {
         width: 100%;
-        padding: 2rem;
         margin: auto;
         padding-top: 10rem; } }
     @media (max-width: 56.25em) {
@@ -939,11 +957,20 @@ svg {
       .contact__info {
         font-size: 1rem; } }
     .contact__info #phone {
-      color: #777; }
+      color: #fff; }
       .contact__info #phone a {
-        color: #777; }
+        color: #fff; }
+        @media (max-width: 56.25em) {
+          .contact__info #phone a {
+            color: #777; } }
         .contact__info #phone a:link, .contact__info #phone a:visited, .contact__info #phone a:active, .contact__info #phone a:any-link, .contact__info #phone a:-webkit-any-link {
-          color: #777; }
+          color: #fff; }
+          @media (max-width: 56.25em) {
+            .contact__info #phone a:link, .contact__info #phone a:visited, .contact__info #phone a:active, .contact__info #phone a:any-link, .contact__info #phone a:-webkit-any-link {
+              color: #777; } }
+      @media (max-width: 56.25em) {
+        .contact__info #phone {
+          color: #777; } }
     .contact__info--svg-container {
       position: relative;
       width: 100%;
