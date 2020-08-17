@@ -24,3 +24,8 @@ html {
 body {
 	box-sizing: border-box;
 }
+
+::selection {
+	background-color: $color-light-purple;
+	color: $color-white;
+}

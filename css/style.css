@@ -5,18 +5,22 @@
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     html {
       font-size: 40%; } }
 
 body {
   box-sizing: border-box; }
+
+::selection {
+  background-color: #8748c5;
+  color: #fff; }
 
 @keyframes moveInLeft {
   0% {
@@ -259,7 +263,7 @@ body {
     transform: translate(-50%, -50%);
     width: 90%;
     text-align: center; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       border-radius: 3px;
@@ -320,7 +324,7 @@ body {
       animation-fill-mode: backwards; }
   .social-media-icons .social-icons-img {
     transition: 1s ease-out; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .social-media-icons .social-icons-img {
         transform: scale(0.75); } }
   .social-media-icons .social-icons-img:hover {
@@ -369,7 +373,7 @@ svg {
   top: 0;
   left: -40%;
   margin: auto; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     svg {
       width: 100%;
       top: -40%;
@@ -436,10 +440,10 @@ svg {
     visibility: visible;
     letter-spacing: 1.2rem;
     padding-left: 0; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup h2 {
         letter-spacing: 1rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup h2 {
         letter-spacing: .5rem; } }
   .popup__content {
@@ -460,7 +464,7 @@ svg {
     width: 80%;
     vertical-align: middle;
     padding: 3rem 5rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__right {
         width: 100%; } }
   .popup__text {
@@ -474,21 +478,21 @@ svg {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__text {
         column-count: 1;
         column-gap: 0; } }
   .popup__btn-wrapper {
     display: flex;
     justify-content: flex-end; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__btn-wrapper {
         justify-content: center;
         flex-wrap: wrap;
         align-content: space-between; } }
     .popup__btn-wrapper--btn {
       margin-bottom: 1rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .popup__btn-wrapper--btn {
           margin-bottom: 1rem; } }
     .popup__btn-wrapper a {
@@ -520,7 +524,7 @@ svg {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0% 85%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0% 85%);
   position: relative; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .header {
       background-image: url(../img/initials3.png), linear-gradient(to bottom, #cbcbcb, white, #cbcbcb); } }
   .header__logo-box {
@@ -531,7 +535,7 @@ svg {
     .header__logo-box:hover {
       transform: rotate(350deg);
       border: solid 0.4rem #fff; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .header__logo-box:hover {
           transform: rotate(0deg); } }
   .header__logo {
@@ -570,7 +574,7 @@ svg {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .navigation__button {
       right: 2rem; } }
 
@@ -584,7 +588,7 @@ svg {
   background-image: radial-gradient(#8748c5, #422263);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.88, 0.01, 0.08, 1.01); }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .navigation__background {
       right: 2.5rem; } }
 
@@ -694,10 +698,10 @@ svg {
     padding: 3rem;
     width: 100%;
     margin: 20rem 0 10rem 0; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .section-about__transparent {
         margin: 30rem 0 20rem 0; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .section-about__transparent {
         margin: 25rem 0 20rem 0; } }
     .section-about__transparent h2 {
@@ -726,7 +730,7 @@ svg {
   opacity: 0;
   visibility: hidden;
   transition: visibility .5s 300ms ease-out, animation; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .about {
       display: flex;
       flex-direction: column;
@@ -752,7 +756,7 @@ svg {
   .about h3 {
     display: inline-block;
     position: relative; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .about h3 {
         align-self: center; } }
   .about h3:after {
@@ -797,10 +801,10 @@ svg {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem;
       padding: 0 3rem; } }
@@ -812,11 +816,11 @@ svg {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0;
           margin-bottom: 4rem; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
   .row .col-1-of-2 {
@@ -837,20 +841,20 @@ svg {
   color: #cbcbcb;
   height: 15rem;
   padding: 2rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer {
       height: 100%; } }
   .footer__content {
     display: flex;
     justify-content: space-around;
     align-items: center; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__content {
         flex-direction: column-reverse;
         align-content: space-between; } }
     .footer__content-menu {
       list-style: none; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .footer__content-menu {
           display: none; } }
       .footer__content-menu li {
@@ -868,14 +872,14 @@ svg {
     color: #d1a3ff; }
   .footer p span.purple {
     color: #d1a3ff; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer p {
       text-align: center; } }
 
 .section-project {
   background-image: linear-gradient(to bottom, #cbcbcb, white, #cbcbcb);
   padding: 15rem 0 10rem 0; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-project {
       padding: 10rem 0 10rem 0; } }
   .section-project--wrapper {
@@ -909,12 +913,12 @@ svg {
   width: 75%;
   margin: 0 auto;
   position: relative; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .contact {
       background-image: linear-gradient(180deg, black 0%, black 18%, white 18%); } }
   .contact h2 {
     letter-spacing: 1rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .contact h2 {
         margin-bottom: 1rem;
         margin-top: 1rem; } }
@@ -922,15 +926,15 @@ svg {
     width: 50%;
     padding: 6rem;
     margin-left: auto; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .contact__form {
         padding: 2rem; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .contact__form {
         width: 100%;
         margin: auto;
         padding-top: 10rem; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .contact__form input#name,
       .contact__form input#email {
         width: 100%; } }
@@ -941,10 +945,10 @@ svg {
     top: 50%;
     left: 10%;
     transform: translateY(-50%); }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .contact__info {
         left: 5%; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .contact__info {
         color: #777;
         height: 0%;
@@ -953,34 +957,34 @@ svg {
         left: 4%;
         transform: translateY(0);
         font-size: 1.5rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .contact__info {
         font-size: 1rem; } }
     .contact__info #phone {
       color: #fff; }
       .contact__info #phone a {
         color: #fff; }
-        @media (max-width: 56.25em) {
+        @media only screen and (max-width: 56.25em) {
           .contact__info #phone a {
             color: #777; } }
         .contact__info #phone a:link, .contact__info #phone a:visited, .contact__info #phone a:active, .contact__info #phone a:any-link, .contact__info #phone a:-webkit-any-link {
           color: #fff; }
-          @media (max-width: 56.25em) {
+          @media only screen and (max-width: 56.25em) {
             .contact__info #phone a:link, .contact__info #phone a:visited, .contact__info #phone a:active, .contact__info #phone a:any-link, .contact__info #phone a:-webkit-any-link {
               color: #777; } }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .contact__info #phone {
           color: #777; } }
     .contact__info--svg-container {
       position: relative;
       width: 100%;
       height: 75%; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .contact__info--svg-container {
           height: 40%;
           width: 30%;
           margin-left: auto; } }
-      @media (max-width: 37.5em) {
+      @media only screen and (max-width: 37.5em) {
         .contact__info--svg-container {
           height: 0%;
           width: 30%;
@@ -998,7 +1002,7 @@ svg {
     top: 50%;
     left: 70%;
     transform: translate(-50%, -70%); }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .contact h3 {
         padding: 3.5rem;
         top: 50%;
@@ -1016,7 +1020,7 @@ svg {
 
 .u-margin-top-small {
   margin-top: 2rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-top-small {
       margin-top: 1rem; } }
 
