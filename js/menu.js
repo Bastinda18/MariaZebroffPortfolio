@@ -5,3 +5,13 @@ navLink.forEach((link) => {
 		checkbox.checked = false;
 	});
 });
+
+// Detect all clicks on the document
+document.addEventListener('click', function(event) {
+	// If user clicks inside the element, do nothing
+	if (event.target.closest('.popup__content')) {
+		return;
+	}
+
+	document.querySelector('.popup__close').click();
+});

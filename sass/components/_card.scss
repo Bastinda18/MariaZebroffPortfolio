@@ -45,7 +45,11 @@
 
 		&--1 {
 			background-image: linear-gradient(to right bottom, $color-light-purple, $color-purple),
-				url(../img/clean-air.jpg);
+				url(../img/bg-weather-app3.jpg);
+		}
+		&--2 {
+			background-image: linear-gradient(to right bottom, $color-light-purple, $color-purple),
+				url(../img/bg-purrandwoof.jpg);
 		}
 	}
 	&__heading {

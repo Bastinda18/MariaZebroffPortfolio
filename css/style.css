@@ -227,7 +227,9 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #8748c5, #422263), url(../img/clean-air.jpg); }
+      background-image: linear-gradient(to right bottom, #8748c5, #422263), url(../img/bg-weather-app3.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #8748c5, #422263), url(../img/bg-purrandwoof.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -375,9 +377,12 @@ svg {
   margin: auto; }
   @media only screen and (max-width: 56.25em) {
     svg {
-      width: 100%;
-      top: -40%;
+      width: 80%;
+      top: -30%;
       left: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    svg {
+      width: 100%; } }
 
 #Layer_1 rect {
   stroke-dasharray: 300;
@@ -944,7 +949,8 @@ svg {
     height: 60%;
     top: 50%;
     left: 10%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    color: #fff; }
     @media only screen and (max-width: 75em) {
       .contact__info {
         left: 5%; } }
@@ -959,22 +965,20 @@ svg {
         font-size: 1.5rem; } }
     @media only screen and (max-width: 37.5em) {
       .contact__info {
-        font-size: 1rem; } }
-    .contact__info #phone {
+        font-size: 1.7rem; } }
+    .contact__info a {
       color: #fff; }
-      .contact__info #phone a {
+      @media only screen and (max-width: 56.25em) {
+        .contact__info a {
+          color: #777; } }
+      .contact__info a:link, .contact__info a:visited, .contact__info a:active, .contact__info a:any-link, .contact__info a:-webkit-any-link {
         color: #fff; }
         @media only screen and (max-width: 56.25em) {
-          .contact__info #phone a {
+          .contact__info a:link, .contact__info a:visited, .contact__info a:active, .contact__info a:any-link, .contact__info a:-webkit-any-link {
             color: #777; } }
-        .contact__info #phone a:link, .contact__info #phone a:visited, .contact__info #phone a:active, .contact__info #phone a:any-link, .contact__info #phone a:-webkit-any-link {
-          color: #fff; }
-          @media only screen and (max-width: 56.25em) {
-            .contact__info #phone a:link, .contact__info #phone a:visited, .contact__info #phone a:active, .contact__info #phone a:any-link, .contact__info #phone a:-webkit-any-link {
-              color: #777; } }
-      @media only screen and (max-width: 56.25em) {
-        .contact__info #phone {
-          color: #777; } }
+    @media only screen and (max-width: 56.25em) {
+      .contact__info {
+        color: #777; } }
     .contact__info--svg-container {
       position: relative;
       width: 100%;

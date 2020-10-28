@@ -114,33 +114,33 @@
 		}
 
 		@include respond(phone) {
-			font-size: 1rem;
+			font-size: 1.7rem;
 		}
 
-		#phone {
-			a {
-				color: $color-white;
-
-				@include respond(tab-port) {
-					color: $color-grey;
-				}
-
-				&:link,
-				&:visited,
-				&:active,
-				&:any-link,
-				&:-webkit-any-link {
-					color: $color-white;
-					@include respond(tab-port) {
-						color: $color-grey;
-					}
-				}
-			}
+		// #phone {
+		a {
 			color: $color-white;
+
 			@include respond(tab-port) {
 				color: $color-grey;
 			}
+
+			&:link,
+			&:visited,
+			&:active,
+			&:any-link,
+			&:-webkit-any-link {
+				color: $color-white;
+				@include respond(tab-port) {
+					color: $color-grey;
+				}
+			}
 		}
+		color: $color-white;
+		@include respond(tab-port) {
+			color: $color-grey;
+		}
+		// }
 
 		&--svg-container {
 			position: relative;
