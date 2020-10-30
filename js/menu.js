@@ -6,14 +6,12 @@ navLink.forEach((link) => {
 	});
 });
 
-// Detect all clicks on the document
-
 document.addEventListener('click', function(event) {
 	// If user clicks inside the element, do nothing
 
-	if (event.target.closest('.popup__content') || event.target.closest('.section-contacts')) {
-		return;
+	if (!event.target.closest('.popup__content') && event.target.closest('.popup')) {
+		document.querySelector('.popup__close').click();
 	}
 
-	document.querySelector('.popup__close').click();
+	return;
 });

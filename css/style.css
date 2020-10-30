@@ -230,6 +230,8 @@ body {
       background-image: linear-gradient(to right bottom, #8748c5, #422263), url(../img/bg-weather-app3.jpg); }
     .card__picture--2 {
       background-image: linear-gradient(to right bottom, #8748c5, #422263), url(../img/bg-purrandwoof.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #8748c5, #422263), url(../img/bg-campbooking.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
