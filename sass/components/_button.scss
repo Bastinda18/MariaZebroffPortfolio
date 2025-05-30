@@ -1,3 +1,4 @@
+@use "sass:color";
 .btn {
 	&,
 	&:link,
@@ -6,7 +7,7 @@
 		text-decoration: none;
 		padding: 0.5rem 3.6rem;
 		display: inline-block;
-		border: .1rem solid darken($color-grey, 15%);
+		border: .1rem solid color.adjust($color-grey, $lightness: -15%);
 		transition: all .2s;
 		border-radius: 3px;
 		position: relative;

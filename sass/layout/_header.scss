@@ -65,12 +65,13 @@
 			);
 
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-	&__text-box {
+
+		&__text-box {
 		position: absolute;
 		top: 30%;
 		left: 50%;
 		transform: translate(-50%, -20%);
 		text-align: center;
+	}
 	}
 }

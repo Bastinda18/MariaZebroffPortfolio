@@ -4,7 +4,7 @@
 	"description": "Landing Page for Maria Zebroff's Portfolio",
 	"main": "index.js",
 	"scripts": {
-		"compile:sass": "node-sass sass/main.scss css/style.css -w"
+		"compile:sass": "sass sass/main.scss css/style.css --watch"
 	},
 	"repository": {
 		"type": "git",
@@ -16,7 +16,7 @@
 		"url": "https://github.com/Bastinda18/MariaZebroffPortfolio/issues"
 	},
 	"homepage": "https://github.com/Bastinda18/MariaZebroffPortfolio#readme",
-	"devDependencies": {
-		"node-sass": "^4.14.1"
+	"dependencies": {
+		"sass": "^1.89.0"
 	}
 }
